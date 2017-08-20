@@ -1,3 +1,23 @@
 h1 {
   font-family: arial, helvetica, serif;
+  font-size: 2em;
+}
+
+a {
+  font-family: arial, helvetica, serif;
+  font-size: 1em;
+  color: #f9c507;
+  text-decoration: none;
+}
+
+a:hover {
+  font-family: arial, helvetica, serif;
+  font-size: 1em;
+  color: #f9c507;
+  font-weight: bold;
+}
+
+ul {
+  list-style: none;
+  line-height: 1.5;
 }
