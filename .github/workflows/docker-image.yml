@@ -7,11 +7,26 @@ on:
       - Makefile
       - README.md
 
-jobs:
-  build:
-    runs-on: ubuntu-latest
+env:
+  IMAGE_TAG: $(date +%s)
 
+jobs:
+  investigate:
+    runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - name: Build FRUK Docker image
-        run: docker build ./site --file ./site/Dockerfile --tag registry.digitalocean.com/fratcliffe/fruk:$(date +%s)
+      - name: cat Dockerfile
+        if: always()
+        run: cat ../../../.nvm/Dockerfile
+#   docker:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - name: Docker Build & Push Action
+#         uses: mr-smithers-excellent/docker-build-push@v6.2
+#         with:
+#           image: fruk
+#           tags: ${{ env.IMAGE_TAG }}
+#           registry: registry.digitalocean.com/fratcliffe
+#           dockerfile: ../../site/Dockerfile
+#           directory: ../../site
+#           username: ${{ secrets.DO_REGISTRY_TOKEN }}
+#           password: ${{ secrets.DO_REGISTRY_TOKEN }}
