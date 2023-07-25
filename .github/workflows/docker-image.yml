@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - main
+      - add-tilt
   pull_request:
     branches:
       - add-tilt
@@ -13,8 +14,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v3
-    - name: Build FRUK Docker image
-      run: docker build ./site \
-           --file ./site/Dockerfile \
-           --tag registry.digitalocean.com/fratcliffe/fruk:$(date +%s)
+      - uses: actions/checkout@v3
+      - name: Build FRUK Docker image
+        run: docker build ./site --file ./site/Dockerfile --tag registry.digitalocean.com/fratcliffe/fruk:$(date +%s)
