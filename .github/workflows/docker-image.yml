@@ -3,7 +3,7 @@ name: FRUK Docker Image CI
 on:
   push:
     branches:
-      - add-tilt
+      - main
   pull_request:
     branches:
       - add-tilt
