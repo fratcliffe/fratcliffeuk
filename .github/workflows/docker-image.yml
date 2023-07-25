@@ -11,16 +11,21 @@ env:
   IMAGE_TAG: $(date +%s)
 
 jobs:
-  docker:
-    runs-on: ubuntu-latest
+  directory:
+    runs-on: ubuntu-latests
     steps:
-      - name: Docker Build & Push Action
-        uses: mr-smithers-excellent/docker-build-push@v6.2
-        with:
-          image: fruk
-          tags: ${{ env.IMAGE_TAG }}
-          registry: registry.digitalocean.com/fratcliffe
-          dockerfile: ../../site/Dockerfile
-          directory: ../../site
-          username: ${{ secrets.DO_REGISTRY_TOKEN }}
-          password: ${{ secrets.DO_REGISTRY_TOKEN }}
+      - name: Print github.workspace
+        run: echo ${{ github.workspace }}
+#   docker:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - name: Docker Build & Push Action
+#         uses: mr-smithers-excellent/docker-build-push@v6.2
+#         with:
+#           image: fruk
+#           tags: ${{ env.IMAGE_TAG }}
+#           registry: registry.digitalocean.com/fratcliffe
+#           dockerfile: ../../site/Dockerfile
+#           directory: ../../site
+#           username: ${{ secrets.DO_REGISTRY_TOKEN }}
+#           password: ${{ secrets.DO_REGISTRY_TOKEN }}
