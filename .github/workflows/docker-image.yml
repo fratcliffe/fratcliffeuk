@@ -2,12 +2,10 @@ name: FRUK Docker Image CI
 
 on:
   push:
-    branches:
-      - main
-      - add-tilt
-  pull_request:
-    branches:
-      - add-tilt
+    paths-ignore:
+      - .gitignore
+      - Makefile
+      - README.md
 
 jobs:
   build:
