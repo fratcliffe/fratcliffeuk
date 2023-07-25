@@ -15,7 +15,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Print workspace
-        run: echo $GITHUB_WORKSPACE && ls -lash && pwd && ls -lash ../ && ls -lash ../../
+        run: echo $GITHUB_WORKSPACE
+      - name: Print wd
+        run: pwd
+      - name: List files
+        run: ls -lash ../ && ls -lash ../../ && ls -lash ../../../ && ls -lash /
 #   docker:
 #     runs-on: ubuntu-latest
 #     steps:
