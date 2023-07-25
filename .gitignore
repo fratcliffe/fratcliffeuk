@@ -1,3 +1,4 @@
+.env
 .idea/
 .well-known/
 **/.DS_Store
