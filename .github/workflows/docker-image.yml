@@ -15,7 +15,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Find Dockerfiles
-        run: find ../../ -name Dockerfile -type f
+        run: find ../../../ -name Dockerfile -type f
 #   docker:
 #     runs-on: ubuntu-latest
 #     steps:
