@@ -15,7 +15,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Print workspace
-        run: echo $GITHUB_WORKSPACE
+        run: echo $GITHUB_WORKSPACE && ls -lash
 #   docker:
 #     runs-on: ubuntu-latest
 #     steps:
