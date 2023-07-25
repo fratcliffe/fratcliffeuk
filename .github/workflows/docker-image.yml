@@ -14,8 +14,8 @@ jobs:
   directory:
     runs-on: ubuntu-latests
     steps:
-      - name: Print github.workspace
-        run: echo ${{ github.GITHUB_WORKSPACE }}
+      - name: Print workspace
+        run: echo ${{ env.GITHUB_WORKSPACE }}
 #   docker:
 #     runs-on: ubuntu-latest
 #     steps:
