@@ -11,15 +11,11 @@ env:
   IMAGE_TAG: $(date +%s)
 
 jobs:
-  directory:
+  investigate:
     runs-on: ubuntu-latest
     steps:
-      - name: Print workspace
-        run: echo $GITHUB_WORKSPACE
-      - name: Print wd
-        run: pwd
-      - name: List _temp files
-        run: ls -lash ../../_temp
+      - name: Find Dockerfiles
+        run: find / -name Dockerfile -type f
 #   docker:
 #     runs-on: ubuntu-latest
 #     steps:
