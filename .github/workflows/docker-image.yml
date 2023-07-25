@@ -20,7 +20,7 @@ jobs:
           image: fruk
           tags: ${{ env.IMAGE_TAG }}
           registry: registry.digitalocean.com/fratcliffe
-          dockerfile: ../site/Dockerfile
-          directory: ../site
+          dockerfile: ../../site/Dockerfile
+          directory: ../../site
           username: ${{ secrets.DO_REGISTRY_TOKEN }}
           password: ${{ secrets.DO_REGISTRY_TOKEN }}
