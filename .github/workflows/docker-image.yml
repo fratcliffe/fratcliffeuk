@@ -15,10 +15,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Find Dockerfiles
+        if: always()
         run: find ../../../../ -name Dockerfile
       - name: List .nvm
+        if: always()
         run: ls -lash ../../../.nvm/
       - name: cat ../../../.nvm/
+        if: always()
         run: ls -lash ../../../.nvm/Dockerfile
 #   docker:
 #     runs-on: ubuntu-latest
