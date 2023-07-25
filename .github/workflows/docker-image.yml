@@ -18,8 +18,8 @@ jobs:
         run: echo $GITHUB_WORKSPACE
       - name: Print wd
         run: pwd
-      - name: List files
-        run: ls -lash ../ && ls -lash ../../ && ls -lash ../../../ && ls -lash /
+      - name: List _temp files
+        run: ls -lash ../../_temp
 #   docker:
 #     runs-on: ubuntu-latest
 #     steps:
