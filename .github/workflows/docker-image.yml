@@ -12,7 +12,7 @@ env:
 
 jobs:
   directory:
-    runs-on: ubuntu-latests
+    runs-on: ubuntu-latest
     steps:
       - name: Print workspace
         run: echo ${{ env.GITHUB_WORKSPACE }}
