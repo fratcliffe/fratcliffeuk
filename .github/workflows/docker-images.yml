@@ -1,0 +1,20 @@
+name: FRUK Docker Image CI
+
+on:
+  push:
+    branches:
+      - add-tilt
+  pull_request:
+    branches:
+      - add-tilt
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Build FRUK Docker image
+      run: docker build ./site \
+           --file ./site/Dockerfile \
+           --tag registry.digitalocean.com/fratcliffe/fruk:$(date +%s)
