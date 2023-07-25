@@ -1,0 +1,10 @@
+apiVersion: v2
+name: fratcliffeuk
+description: A Helm chart for fratcliffe/fratcliffeuk
+type: application
+version: 0.1.0
+appVersion: "0.1.0"
+
+home: https://fratcliffe.uk
+sources:
+  - https://github.com/fratcliffe/fratcliffeuk
