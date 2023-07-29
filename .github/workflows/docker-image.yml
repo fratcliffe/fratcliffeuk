@@ -11,20 +11,14 @@ env:
   IMAGE_TAG: ${{github.ref_name}}
 
 jobs:
-  troubleshoot:
+  docker:
     runs-on: ubuntu-latest
     steps:
-      - name: ls -lash ./
-        run: ls -lash ./
-#   docker:
-#     runs-on: ubuntu-latest
-#     steps:
-#       - name: Docker build and push
-#         uses: cloudposse/github-action-docker-build-push@main
-#         with:
-#           workdir: ./site
-#           registry: registry.digitalocean.com/fratcliffe
-#           image_name: fruk
-#           login: ${{ secrets.DO_REGISTRY_TOKEN }}
-#           password: ${{ secrets.DO_REGISTRY_TOKEN }}
-#           tags: ${{ env.IMAGE_TAG }}
+      - name: Docker build and push
+        uses: cloudposse/github-action-docker-build-push@main
+        with:
+          registry: registry.digitalocean.com/fratcliffe
+          image_name: fruk
+          login: ${{ secrets.DO_REGISTRY_TOKEN }}
+          password: ${{ secrets.DO_REGISTRY_TOKEN }}
+          tags: ${{ env.IMAGE_TAG }}
