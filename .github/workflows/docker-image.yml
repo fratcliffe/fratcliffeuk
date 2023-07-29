@@ -15,7 +15,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: List files in /root
-        run: ls -lash /root
+        run: sudo ls -lash /root
 #   docker:
 #     runs-on: ubuntu-latest
 #     steps:
