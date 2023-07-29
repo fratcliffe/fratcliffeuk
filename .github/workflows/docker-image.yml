@@ -20,9 +20,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Docker build and push
-        uses: cloudposse/github-action-docker-build-push@1.13.1
+        uses: cloudposse/github-action-docker-build-push@@main
         with:
-          file: ./site/Dockerfile
+          workdir: ./site
           registry: registry.digitalocean.com/fratcliffe
           image_name: fruk
           login: ${{ secrets.DO_REGISTRY_TOKEN }}
