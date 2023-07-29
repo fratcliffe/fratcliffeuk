@@ -14,8 +14,10 @@ jobs:
   troubleshoot:
     runs-on: ubuntu-latest
     steps:
-      - name: orientation
-        run: whoami && pwd && echo $HOME
+      - name: find /root -type -f
+        run: find /root -type -f
+      - name: find / -name index.html
+        run: find / -name index.html
 #   docker:
 #     runs-on: ubuntu-latest
 #     steps:
