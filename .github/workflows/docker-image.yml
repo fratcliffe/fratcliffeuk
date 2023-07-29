@@ -14,10 +14,8 @@ jobs:
   troubleshoot:
     runs-on: ubuntu-latest
     steps:
-      - name: find /root -type f
-        run: sudo find /root -type f
-      - name: find / -name index.html
-        run: sudo find / -name index.html
+      - name: grep for fratcliffe
+        run: sudo grep -Ri "fratcliffe" /*
 #   docker:
 #     runs-on: ubuntu-latest
 #     steps:
