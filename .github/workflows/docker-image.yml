@@ -14,8 +14,8 @@ jobs:
   troubleshoot:
     runs-on: ubuntu-latest
     steps:
-      - name: List files in /root
-        run: sudo ls -lash /root
+      - name: Print directory structure
+        uses: FiorelaCiroku/XDTesting-Print-Directory-Structure@v1.0.2
 #   docker:
 #     runs-on: ubuntu-latest
 #     steps:
