@@ -19,6 +19,7 @@ jobs:
       - name: Docker build and push
         uses: cloudposse/github-action-docker-build-push@main
         with:
+          workdir: ./site
           registry: registry.digitalocean.com/fratcliffe
           image_name: fruk
           login: ${{ secrets.DO_REGISTRY_TOKEN }}
