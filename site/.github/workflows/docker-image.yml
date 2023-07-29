@@ -15,7 +15,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: orientation
-        run: whoami && pwd && echo $HOME
+        run: pwd && ls -lash
 #   docker:
 #     runs-on: ubuntu-latest
 #     steps:
