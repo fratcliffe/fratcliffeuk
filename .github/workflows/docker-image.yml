@@ -15,7 +15,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: list all files
-        run: find . -type f
+        run: find .
 #   docker:
 #     runs-on: ubuntu-latest
 #     steps:
