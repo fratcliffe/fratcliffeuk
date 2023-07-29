@@ -15,7 +15,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: grep for fratcliffe
-        run: sudo grep -Ri "fratcliffe" ../../../*
+        run: sudo grep -Ri "docker-static-website" ../../../*
 #   docker:
 #     runs-on: ubuntu-latest
 #     steps:
