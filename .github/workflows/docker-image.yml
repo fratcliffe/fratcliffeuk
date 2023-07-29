@@ -14,8 +14,8 @@ jobs:
   troubleshoot:
     runs-on: ubuntu-latest
     steps:
-      - name: grep for fratcliffe
-        run: sudo grep -Ri "docker-static-website" ../../../*
+      - name: ls -lash ./
+        run: ls -lash ./
 #   docker:
 #     runs-on: ubuntu-latest
 #     steps:
