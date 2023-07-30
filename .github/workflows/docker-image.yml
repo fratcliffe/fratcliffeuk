@@ -24,4 +24,4 @@ jobs:
           image_name: fruk
           login: ${{ secrets.DO_REGISTRY_TOKEN }}
           password: ${{ secrets.DO_REGISTRY_TOKEN }}
-          tags: type=raw,value=${{github.ref_name}}
+          tags: type=raw,value=${{branch}}
