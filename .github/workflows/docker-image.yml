@@ -16,6 +16,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3.5.3
+      - name: echo vars
+        run: echo ${{ env.IMAGE_TAG }} && echo ${{github.ref_name}}
       - name: Docker build and push
         uses: cloudposse/github-action-docker-build-push@main
         with:
