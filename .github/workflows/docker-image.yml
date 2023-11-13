@@ -31,3 +31,4 @@ jobs:
     outputs:
       image: ${{ steps.build.outputs.image }}
       tag: ${{ steps.build.outputs.tag }}
+      annotation: grafana
