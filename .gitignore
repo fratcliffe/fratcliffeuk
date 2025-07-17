@@ -2,3 +2,4 @@
 .idea/
 .well-known/
 **/.DS_Store
+.vscode/
